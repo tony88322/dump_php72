@@ -42,7 +42,7 @@ fi
 if [ -z "${EXTENSIONS##*,xdebug,*}" ]; then
     echo "---------- Install xdebug ----------"
     mkdir xdebug \
-    && tar -xf xdebug-2.6.1.tgz -C xdebug --strip-components=1 \
+    && tar -xf xdebug-2.8.0.tgz -C xdebug --strip-components=1 \
     && ( cd xdebug && phpize && ./configure && make ${MC} && make install ) \
     && docker-php-ext-enable xdebug
 fi

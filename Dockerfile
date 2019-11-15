@@ -1,9 +1,9 @@
-FROM php:7.2.22-fpm-alpine
+FROM php:7.2.24-fpm-alpine
 
 COPY ./extensions /tmp/extensions
 WORKDIR /tmp/extensions
 
-ENV EXTENSIONS=",pdo_mysql,opcache,redis,qii,mysqli,gd,imagick,redis,memcached,pcntl,gettext,sockets,zip,"
+ENV EXTENSIONS=",pdo_mysql,opcache,redis,qii,mysqli,gd,imagick,redis,memcached,pcntl,gettext,sockets,zip,xdebug,"
 ENV MC="-j$(nproc)"
 
 RUN export MC="-j$(nproc)" \
