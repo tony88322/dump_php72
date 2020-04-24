@@ -241,7 +241,7 @@ fi
 
 if [ -z "${EXTENSIONS##*,tidy,*}" ]; then
     echo "---------- Install tidy ----------"
-	apk add --no-cache tidyhtml-dev=5.2.0-r1 --repository http://mirrors.aliyun.com/alpine/v3.6/community
+	apk add --no-cache tidyhtml-dev=5.2.0-r1 --repository http://mirrors.aliyun.com/alpine/v3.10/community
 	docker-php-ext-install ${MC} tidy
 fi
 

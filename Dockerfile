@@ -1,4 +1,4 @@
-FROM php:7.2.24-fpm-alpine
+FROM php:7.2.30-fpm-alpine
 
 COPY ./extensions /tmp/extensions
 WORKDIR /tmp/extensions
